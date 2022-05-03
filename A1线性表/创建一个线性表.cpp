@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 #define N 10
 typedef int SLDataType;//这里利用typedef的特性讲整形声明符命名为SDataType
 typedef struct//创建顺序表
@@ -32,5 +33,6 @@ int main()
    SeqList L;
    SeqListInit (L);
    SeqListDestory(L);//调用上述的两个函数
+   system("pause");//这里说一个小细节就是 需要借住system("pause")来卡住运行框
    return 0;
 }
