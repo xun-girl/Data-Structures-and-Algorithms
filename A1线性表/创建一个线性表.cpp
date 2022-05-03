@@ -1,36 +1,36 @@
 #include<stdio.h>
 #define N 10
-typedef int SLDataType;//ÕâÀïÀûÓÃtypedefµÄÌØĞÔ½²ÕûĞÎÉùÃ÷·ûÃüÃûÎªSDataType
-typedef struct//´´½¨Ë³Ğò±í
+typedef int SLDataType;//è¿™é‡Œåˆ©ç”¨typedefçš„ç‰¹æ€§è®²æ•´å½¢å£°æ˜ç¬¦å‘½åä¸ºSDataType
+typedef struct//åˆ›å»ºé¡ºåºè¡¨
 {
-    SLDataType array[N];//ÊµÖÊÉÏ¾ÍÊÇÒ»¸öÊı×é
-    int size;//Êı×éµÄ³¤¶È
-}SeqList;//ÕâÀïµÄSeqListÊÇÀàĞÍ²»ÊÇ±äÁ¿
-void SeqListInit(SeqList &L)//ÊäÈëË³Ğò±íµÄÖµ,&lÕâÀïÊÇÒ»¸öÒıÓÃÔËËã·û£¬Ïàµ±ÓÚ¸øÕâ¸öLÆğÁËÒ»¸ö´ÂºÅ
+    SLDataType array[N];//å®è´¨ä¸Šå°±æ˜¯ä¸€ä¸ªæ•°ç»„
+    int size;//æ•°ç»„çš„é•¿åº¦
+}SeqList;//è¿™é‡Œçš„SeqListæ˜¯ç±»å‹ä¸æ˜¯å˜é‡
+void SeqListInit(SeqList &L)//è¾“å…¥é¡ºåºè¡¨çš„å€¼,&lè¿™é‡Œæ˜¯ä¸€ä¸ªå¼•ç”¨è¿ç®—ç¬¦ï¼Œç›¸å½“äºç»™è¿™ä¸ªLèµ·äº†ä¸€ä¸ªç»°å·
 {
-    int i,n;//nÕâÀïÊÇÏßĞÔ±íµÄ³¤¶È
-    printf("ÇëÊäÈëÏßĞÔ±íµÄ³¤¶È:");
+    int i,n;//nè¿™é‡Œæ˜¯çº¿æ€§è¡¨çš„é•¿åº¦
+    printf("è¯·è¾“å…¥çº¿æ€§è¡¨çš„é•¿åº¦:");
     scanf("%d",&n);
-    L.size=n;//½²n¸³Öµ¸øL.size
-    printf("ÊäÈëÊı¾İ:");
+    L.size=n;//è®²nèµ‹å€¼ç»™L.size
+    printf("è¾“å…¥æ•°æ®:");
     for(i=0;i<n;i++)
     {
-        scanf("%d",&L.array[i]);//Ô­ÀíºÜ¼òµ¥ÕâÀï¾Í¸øÊı×éÔªËØÖğ¸ö¸³ÖµÀûÓÃÑ­»·
+        scanf("%d",&L.array[i]);//åŸç†å¾ˆç®€å•è¿™é‡Œå°±ç»™æ•°ç»„å…ƒç´ é€ä¸ªèµ‹å€¼åˆ©ç”¨å¾ªç¯
     }
 }
-void SeqListDestory(SeqList L)//´òÓ¡Ë³Ğò±íµÄÖµ£¬ÕâÀïÊÇÉùÃ÷Ò»¸ö½á¹¹Ìå±äÁ¿
+void SeqListDestory(SeqList L)//æ‰“å°é¡ºåºè¡¨çš„å€¼ï¼Œè¿™é‡Œæ˜¯å£°æ˜ä¸€ä¸ªç»“æ„ä½“å˜é‡
 {
     int i=0;
-    printf("Êä³öÊı¾İ:");
+    printf("è¾“å‡ºæ•°æ®:");
     for(i=0;i<L.size;i++)
     {
-      printf("%d ",L.array[i]);//±éÀúÊı×é²¢ÇÒÖğ¸öÊä³öÔªËØ
+      printf("%d ",L.array[i]);//éå†æ•°ç»„å¹¶ä¸”é€ä¸ªè¾“å‡ºå…ƒç´ 
     }
 }
 int main()
 {
    SeqList L;
    SeqListInit (L);
-   SeqListDestory(L);//µ÷ÓÃÉÏÊöµÄÁ½¸öº¯Êı
+   SeqListDestory(L);//è°ƒç”¨ä¸Šè¿°çš„ä¸¤ä¸ªå‡½æ•°
    return 0;
 }
